@@ -2,16 +2,13 @@ $(document).ready(function() {
     var socket_users = null;
     var socket_chat = null;
     var myself = {};
-    myself.id = '';
     var chatPartner = {};
-    chatPartner.id = '';
 
     OPENPLATFORM.getProfile(function(err, data) {
         if (err){
             alert('Error getting user');
         } else {
             myself = data;
-            users();
         }
     });
 
@@ -34,10 +31,10 @@ $(document).ready(function() {
                         $(value).removeClass('partner-selected');
                     });
                     $(event.currentTarget).addClass('partner-selected');
-                    $('#selectedName').text($(event.currentTarget).attr('data-actorName'));
                     chatPartner['id'] = value.id;
                     chatPartner['photo'] = value.photo;
                     chatPartner['alias'] = value.alias;
+                    $('#selectedName').text(chatPartner['alias']);
                     setupChat();
                 });
                 item.appendTo(list_div);

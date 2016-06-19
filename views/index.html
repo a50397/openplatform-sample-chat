@@ -19,32 +19,30 @@
 <body>
 
     <div class="row">
-    <div class="col-xs-3 partners-list-wrapper"  style="padding-right:0px;">
-        <div class="partners-header">
-            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-            <span>Contacts</span?>
+        <div class="col-xs-3 partners-list-wrapper"  style="padding-right:0px;">
+            <div class="partners-header">
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                <span>Contacts</span?>
+            </div>
+            <div style="partner-list" id="partner-list">
+            </div>
         </div>
-        <div style="partner-list" id="partner-list">
+
+        <div class="col-xs-9" style="padding:0px;">
+            <div class="chat-header" style="height:6vh;">
+                <h3>Chatting with <span id="selectedName"></span></h3>
+            </div>
+            <div style="height:86vh;">
+                <ul style="height: 100%; overflow-y: scroll;" id="chat_area">
+                </ul>
+            </div>
+            <div class="inputWrap" style="height:4vh;">
+                    <input type="text" style="width: 80%; height:100%;" placeholder="Message..." id="chat_input">
+                    <button class="inputButton" id="chat_submit"><i class="fa fa-check" aria-hidden="true"></i> Send</button>
+            </div>
 
         </div>
     </div>
-
-    <div class="col-xs-9" style="padding:0px;">
-        <div class="chat-header" style="height:6vh;">
-            <h3>Chatting with <span id="selectedName"></span></h3>
-        </div>
-        <div style="height:86vh;">
-            <ul style="height: 100%; overflow-y: scroll;" id="chat_area">
-
-            </ul>
-        </div>
-        <div class="inputWrap" style="height:4vh;">
-                <input type="text" style="width: 80%; height:100%;" placeholder="Message..." id="chat_input">
-                <button class="inputButton" id="chat_submit"><i class="fa fa-check" aria-hidden="true"></i> Send</button>
-        </div>
-
-    </div>
-</div>
 
 	<!-- client-side scripts -->
 	@{helpers.openplatform()}

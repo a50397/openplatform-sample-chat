@@ -1,11 +1,7 @@
 exports.id = 'chats';
 var chats = {};
 
-exports.init = function(self) {
-};
-
 exports.getChat = function(route){
-    console.log('get chats');
     if (!chats[route]){
         chats[route] = [];
     }
@@ -13,7 +9,6 @@ exports.getChat = function(route){
 }
 
 exports.updateChat = function(route, actor, chat){
-    console.log('updating ', route, actor, chat);
     if (!chats[route]){
         chats[route] = [];
     }
