@@ -1,0 +1,156 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    line-height: 20px;
+}
+
+body, html {
+    height: 98vh;
+    width: 98vw;
+}
+
+.large-img {
+    float: left;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0px 0px 7px #888888;
+}
+
+.chatlist {
+    display: inline-block;
+    width: 90%;
+    list-style-type: none;
+    margin: 10px;
+}
+
+.chat-text {
+    font-size: 15px;
+    font-weight:300;
+    float: left;
+    background: white;
+    width: 50%;
+    min-height: 70px;
+    border-left: solid 3px black;
+    margin-left: 30px;
+    padding-left: 20px;
+    word-wrap: break-word;
+}
+
+.large-img-right {
+    float:right;
+    margin-right: 30px;
+
+}
+
+.chat-text-right {
+    float:right;
+    border-left: none;
+    margin-left: 0px;
+    padding-left: 0px;
+    border-right: solid 3px black;
+    margin-right: 30px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.small-img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 0px 7px white;
+    vertical-align:middle;
+}
+
+.partners-list-wrapper {
+    font-family: 'Arimo', sans-serif;
+    background-color: black;
+    color: white;
+    height:100vh;
+    font-weight:900;
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    padding-right: 0px;
+}
+
+.partners-header {
+    padding-bottom: 30px;
+    padding-top:10px;
+}
+
+.partners-header span {
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.partners-list {
+
+}
+
+.partners-list-item {
+    padding-left:25%;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+odklad {
+    display: flex;
+    align-items: center;
+}
+
+.partners-list-item:hover {
+    background: #062475;
+}
+
+.partner-selected {
+    background: #244FB3;
+}
+
+.partner-selected:hover {
+    background: #244FB3;
+}
+
+.chatInput{
+    width: 80%;
+    height: 100px;
+     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+     box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.inputWrap {
+    width: 80%;
+    position: fixed;
+    bottom: 10px;
+     padding-left:10px;
+    width: 80%;
+    background-color: white;
+}
+
+.inputButton {
+    width: 10%;
+    height: 100%;
+
+}
+
+.chat-header {
+    height: 60px;
+    width:100%;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 3px;
+    padding-left: 20px;
+}
+
+.onlineStatus {
+    padding-left: 0px;
+    font-size: small;
+    color: grey;
+}
+
+.online {
+    color: greenyellow;
+}

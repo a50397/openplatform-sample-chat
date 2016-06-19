@@ -1,0 +1,108 @@
+2016-06-17 09:52:27 | Error: Missing the "cookie" and "openplatform" query parameter.
+    at Object.OPENPLATFORM.authorize (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-1nnhvk90wo.js:75:19)
+    at Object.<anonymous> (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-1nnhvk90wo.js:14:15)
+    at Subscribe.doExecute (/usr/lib/node_modules/total.js/index.js:9768:23)
+    at Subscribe.execute (/usr/lib/node_modules/total.js/index.js:9678:15)
+    at Subscribe.doAuthorization (/usr/lib/node_modules/total.js/index.js:9819:8)
+    at /usr/lib/node_modules/total.js/index.js:9720:9
+    at F.onAuthorize (/home/a50397/Documents/openplatform/openplatform-application-master/definitions/auth.js:7:2)
+    at Subscribe.prepare (/usr/lib/node_modules/total.js/index.js:9709:3)
+    at Subscribe.doEnd (/usr/lib/node_modules/total.js/index.js:9857:8)
+    at IncomingMessage.self.req.on (/usr/lib/node_modules/total.js/index.js:9610:32)
+2016-06-17 09:52:30 | Error: Missing the "cookie" and "openplatform" query parameter.
+    at Object.OPENPLATFORM.authorize (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-1nnhvk90wo.js:75:19)
+    at Object.<anonymous> (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-1nnhvk90wo.js:14:15)
+    at Subscribe.doExecute (/usr/lib/node_modules/total.js/index.js:9768:23)
+    at Subscribe.execute (/usr/lib/node_modules/total.js/index.js:9678:15)
+    at Subscribe.doAuthorization (/usr/lib/node_modules/total.js/index.js:9819:8)
+    at /usr/lib/node_modules/total.js/index.js:9720:9
+    at F.onAuthorize (/home/a50397/Documents/openplatform/openplatform-application-master/definitions/auth.js:7:2)
+    at Subscribe.prepare (/usr/lib/node_modules/total.js/index.js:9709:3)
+    at Subscribe.doEnd (/usr/lib/node_modules/total.js/index.js:9857:8)
+    at IncomingMessage.self.req.on (/usr/lib/node_modules/total.js/index.js:9610:32)
+2016-06-17 09:53:43 | Error: Missing the "cookie" and "openplatform" query parameter.
+    at Object.OPENPLATFORM.authorize (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-1nnhvk90wo.js:75:19)
+    at Object.<anonymous> (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-1nnhvk90wo.js:14:15)
+    at Subscribe.doExecute (/usr/lib/node_modules/total.js/index.js:9768:23)
+    at Subscribe.execute (/usr/lib/node_modules/total.js/index.js:9678:15)
+    at Subscribe.doAuthorization (/usr/lib/node_modules/total.js/index.js:9819:8)
+    at /usr/lib/node_modules/total.js/index.js:9720:9
+    at F.onAuthorize (/home/a50397/Documents/openplatform/openplatform-application-master/definitions/auth.js:7:2)
+    at Subscribe.prepare (/usr/lib/node_modules/total.js/index.js:9709:3)
+    at Subscribe.doEnd (/usr/lib/node_modules/total.js/index.js:9857:8)
+    at IncomingMessage.self.req.on (/usr/lib/node_modules/total.js/index.js:9610:32)
+2016-06-17 10:06:45 | Error: Missing the "cookie" and "openplatform" query parameter.
+    at Object.OPENPLATFORM.authorize (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-5ykzt315b8.js:75:19)
+    at Object.<anonymous> (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-5ykzt315b8.js:14:15)
+    at Subscribe.doExecute (/usr/lib/node_modules/total.js/index.js:9768:23)
+    at Subscribe.execute (/usr/lib/node_modules/total.js/index.js:9678:15)
+    at Subscribe.doAuthorization (/usr/lib/node_modules/total.js/index.js:9819:8)
+    at /usr/lib/node_modules/total.js/index.js:9720:9
+    at F.onAuthorize (/home/a50397/Documents/openplatform/openplatform-application-master/definitions/auth.js:7:2)
+    at Subscribe.prepare (/usr/lib/node_modules/total.js/index.js:9709:3)
+    at Subscribe.doEnd (/usr/lib/node_modules/total.js/index.js:9857:8)
+    at IncomingMessage.self.req.on (/usr/lib/node_modules/total.js/index.js:9610:32)
+2016-06-17 10:06:47 | Error: Missing the "cookie" and "openplatform" query parameter.
+    at Object.OPENPLATFORM.authorize (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-5ykzt315b8.js:75:19)
+    at Object.<anonymous> (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-5ykzt315b8.js:14:15)
+    at Subscribe.doExecute (/usr/lib/node_modules/total.js/index.js:9768:23)
+    at Subscribe.execute (/usr/lib/node_modules/total.js/index.js:9678:15)
+    at Subscribe.doAuthorization (/usr/lib/node_modules/total.js/index.js:9819:8)
+    at /usr/lib/node_modules/total.js/index.js:9720:9
+    at F.onAuthorize (/home/a50397/Documents/openplatform/openplatform-application-master/definitions/auth.js:7:2)
+    at Subscribe.prepare (/usr/lib/node_modules/total.js/index.js:9709:3)
+    at Subscribe.doEnd (/usr/lib/node_modules/total.js/index.js:9857:8)
+    at IncomingMessage.self.req.on (/usr/lib/node_modules/total.js/index.js:9610:32)
+2016-06-17 10:07:51 | [ { name: 'error-application-origin',
+    error: 'Your IP address is not valid for this operation.' } ]
+2016-06-17 10:08:19 | [ { name: 'error-application-origin',
+    error: 'Your IP address is not valid for this operation.' } ]
+2016-06-17 10:08:24 | Error: Missing the "cookie" and "openplatform" query parameter.
+    at Object.OPENPLATFORM.authorize (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-hmi1dq612f.js:75:19)
+    at Object.<anonymous> (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-hmi1dq612f.js:14:15)
+    at Subscribe.doExecute (/usr/lib/node_modules/total.js/index.js:9768:23)
+    at Subscribe.execute (/usr/lib/node_modules/total.js/index.js:9678:15)
+    at Subscribe.doAuthorization (/usr/lib/node_modules/total.js/index.js:9819:8)
+    at /usr/lib/node_modules/total.js/index.js:9720:9
+    at F.onAuthorize (/home/a50397/Documents/openplatform/openplatform-application-master/definitions/auth.js:7:2)
+    at Subscribe.prepare (/usr/lib/node_modules/total.js/index.js:9709:3)
+    at Subscribe.doEnd (/usr/lib/node_modules/total.js/index.js:9857:8)
+    at IncomingMessage.self.req.on (/usr/lib/node_modules/total.js/index.js:9610:32)
+2016-06-17 10:10:22 | [ { name: 'error-application-origin',
+    error: 'Your IP address is not valid for this operation.' } ]
+2016-06-17 10:10:28 | [ { name: 'error-application-origin',
+    error: 'Your IP address is not valid for this operation.' } ]
+2016-06-17 10:13:56 | Error: Missing the "cookie" and "openplatform" query parameter.
+    at Object.OPENPLATFORM.authorize (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-hmi1dq612f.js:75:19)
+    at Object.<anonymous> (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-hmi1dq612f.js:14:15)
+    at Subscribe.doExecute (/usr/lib/node_modules/total.js/index.js:9768:23)
+    at Subscribe.execute (/usr/lib/node_modules/total.js/index.js:9678:15)
+    at Subscribe.doAuthorization (/usr/lib/node_modules/total.js/index.js:9819:8)
+    at /usr/lib/node_modules/total.js/index.js:9720:9
+    at F.onAuthorize (/home/a50397/Documents/openplatform/openplatform-application-master/definitions/auth.js:7:2)
+    at Subscribe.prepare (/usr/lib/node_modules/total.js/index.js:9709:3)
+    at Subscribe.doEnd (/usr/lib/node_modules/total.js/index.js:9857:8)
+    at IncomingMessage.self.req.on (/usr/lib/node_modules/total.js/index.js:9610:32)
+2016-06-17 10:14:04 | Error: Missing the "cookie" and "openplatform" query parameter.
+    at Object.OPENPLATFORM.authorize (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-hmi1dq612f.js:75:19)
+    at Object.<anonymous> (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-hmi1dq612f.js:14:15)
+    at Subscribe.doExecute (/usr/lib/node_modules/total.js/index.js:9768:23)
+    at Subscribe.execute (/usr/lib/node_modules/total.js/index.js:9678:15)
+    at Subscribe.doAuthorization (/usr/lib/node_modules/total.js/index.js:9819:8)
+    at /usr/lib/node_modules/total.js/index.js:9720:9
+    at F.onAuthorize (/home/a50397/Documents/openplatform/openplatform-application-master/definitions/auth.js:7:2)
+    at Subscribe.prepare (/usr/lib/node_modules/total.js/index.js:9709:3)
+    at Subscribe.doEnd (/usr/lib/node_modules/total.js/index.js:9857:8)
+    at IncomingMessage.self.req.on (/usr/lib/node_modules/total.js/index.js:9610:32)
+2016-06-17 10:14:41 | Error: Missing the "cookie" and "openplatform" query parameter.
+    at Object.OPENPLATFORM.authorize (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-hmi1dq612f.js:75:19)
+    at Object.<anonymous> (/home/a50397/Documents/openplatform/openplatform-application-master/tmp/installed-module-hmi1dq612f.js:14:15)
+    at Subscribe.doExecute (/usr/lib/node_modules/total.js/index.js:9768:23)
+    at Subscribe.execute (/usr/lib/node_modules/total.js/index.js:9678:15)
+    at Subscribe.doAuthorization (/usr/lib/node_modules/total.js/index.js:9819:8)
+    at /usr/lib/node_modules/total.js/index.js:9720:9
+    at F.onAuthorize (/home/a50397/Documents/openplatform/openplatform-application-master/definitions/auth.js:7:2)
+    at Subscribe.prepare (/usr/lib/node_modules/total.js/index.js:9709:3)
+    at Subscribe.doEnd (/usr/lib/node_modules/total.js/index.js:9857:8)
+    at IncomingMessage.self.req.on (/usr/lib/node_modules/total.js/index.js:9610:32)
+2016-06-17 10:29:11 | [ { name: 'error-invalid-token', error: 'Invalid session token.' } ]

@@ -1,0 +1,54 @@
+@{layout('')}
+@{title('Simple sample chat application for openplatform')}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="all,follow" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+	@{import('meta', 'head','font-awesome.min.css', 'default.css', 'default.js', 'favicon.ico')}
+</head>
+<body>
+
+    <div class="row">
+    <div class="col-xs-3 partners-list-wrapper"  style="padding-right:0px;">
+        <div class="partners-header">
+            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+            <span>Contacts</span?>
+        </div>
+        <div style="partner-list" id="partner-list">
+
+        </div>
+    </div>
+
+    <div class="col-xs-9" style="padding:0px;">
+        <div class="chat-header" style="height:6vh;">
+            <h3>Chatting with <span id="selectedName"></span></h3>
+        </div>
+        <div style="height:86vh;">
+            <ul style="height: 100%; overflow-y: scroll;" id="chat_area">
+
+            </ul>
+        </div>
+        <div class="inputWrap" style="height:4vh;">
+                <input type="text" style="width: 80%; height:100%;" placeholder="Message..." id="chat_input">
+                <button class="inputButton" id="chat_submit"><i class="fa fa-check" aria-hidden="true"></i> Send</button>
+        </div>
+
+    </div>
+</div>
+
+	<!-- client-side scripts -->
+	@{helpers.openplatform()}
+
+</body>
+</html>
+
