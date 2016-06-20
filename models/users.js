@@ -1,6 +1,7 @@
 exports.id = 'users';
 var users = [];
 var usersObj = {};
+var channels = {};
 
 exports.init = function(self) {
     OPENPLATFORM.getUsers(self.openplatform, self.id, function(err, response) {
@@ -9,11 +10,11 @@ exports.init = function(self) {
         } else {
             users = response;
             for (var i = 0; i < response.length; i++){
-                usersObj[response[i].id] = response[i];
+                if (response[i].has)
+                    usersObj[response[i].id] = response[i];
             }
         }
     });
-
 };
 
 exports.getUsers = function(){
@@ -23,3 +24,4 @@ exports.getUsers = function(){
 exports.getUsersObj = function(){
     return usersObj;
 }
+

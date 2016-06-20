@@ -95,7 +95,18 @@ body, html {
     padding-left:25%;
     padding-top:15px;
     padding-bottom:15px;
+    text-align: left;
 }
+
+.partners-list-item h4  {
+    margin-bottom: 0px;
+    padding-left: 60px;
+}
+
+.partners-list-item span {
+    padding-left: 35px;
+}
+
 
 odklad {
     display: flex;
@@ -103,15 +114,15 @@ odklad {
 }
 
 .partners-list-item:hover {
-    background: #062475;
+    background: rgba(1, 124, 202, 0.57);
 }
 
 .partner-selected {
-    background: #244FB3;
+    background: #017CCA;
 }
 
 .partner-selected:hover {
-    background: #244FB3;
+    background: #017CCA;
 }
 
 .chatInput{
@@ -148,9 +159,50 @@ odklad {
 .onlineStatus {
     padding-left: 0px;
     font-size: small;
-    color: grey;
+    color: #d0c8c8;
 }
 
 .online {
     color: greenyellow;
 }
+
+.mybadge {
+    position:relative;
+}
+
+.mybadge[data-unread]:after {
+   content:attr(data-unread);
+   position:absolute;
+   top:-10px;
+   right:0px;
+   font-size:.7em;
+   background:red;
+   color:white;
+   width:18px;height:18px;
+   text-align:center;
+   line-height:18px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
+
+
+/*
+The MIT License
+Copyright 2006-2016 (c) Peter Širka <petersirka@gmail.com>
+*/
+
+.smiles { background-image: url(https://componentator.com/download/smilefy.png); width: 18px; height: 18px; position: relative; display: inline-block; vertical-align: middle; margin-top: -1px; }
+.smiles-0 { background-position: 0 0; }
+.smiles-1 { background-position: -18px 0; }
+.smiles-2 { background-position: -36px 0; }
+.smiles-3 { background-position: -54px 0; }
+.smiles-4 { background-position: -72px 0; }
+.smiles-5 { background-position: -90px 0; }
+.smiles-6 { background-position: -108px 0; }
+.smiles-7 { background-position: -126px 0; }
+.smiles-8 { background-position: -144px 0; }
+.smiles-9 { background-position: -162px 0; }
+.smiles-10 { background-position: -180px 0; }
+.smiles-11 { background-position: -198px 0; }
+.smiles-12 { background-position: -216px 0; }
+
