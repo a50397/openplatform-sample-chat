@@ -13,29 +13,19 @@ function view_index() {
 
 function socket_users(){
     var controller = this;
-    var users = MODEL('users').getUsers();
+    var usersObj = MODEL('users').getUsersObj();
 
     controller.on('open', function(client) {
         client.id = client.user.id;
         for (user in controller.connections){
-            for (var i = 0; i < users.length; i++){
-                if (controller.connections[user].id == users[i].id){
-                    users[i].chatOnline = true;
-                    break;
-                }
-            }
+            usersObj[controller.connections[user].id].chatOnline = true;
         }
-		controller.send(users);
+		controller.send(usersObj);
 	});
 
 	controller.on('close', function(client) {
-		for (var i = 0; i < users.length; i++){
-            if (client.id == users[i].id){
-                users[i].chatOnline = false;
-                break;
-            }
-        }
-		controller.send(users);
+        usersObj[client.id].chatOnline = false;
+		controller.send(usersObj);
 	});
 
     controller.on('message',function(client, message){
