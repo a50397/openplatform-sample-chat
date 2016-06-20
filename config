@@ -3,7 +3,7 @@ author                          : openplatform
 version                         : 1.0.0
 secret                          : secret-key-for-web
 
-openplatform.url                : http://33706886.ngrok.io/openplatform.json
+openplatform.url                : http://51f50112.ngrok.io/openplatform.json
 
 // Important: openplatform (administration) must know this secret
 openplatform.secret             :
