@@ -17,7 +17,7 @@ function socket_users(){
 
     controller.on('open', function(client) {
         client.id = client.user.id;
-        MODEL('channels').putChannel(client.id, controller);
+        MODEL('channels').putChannel(client.id, client);
         //usersObj[client.id].chatOnline = true;
         for (user in controller.connections){
             usersObj[controller.connections[user].id].chatOnline = true;
@@ -54,7 +54,6 @@ function socket_chats(route){
             else
                 var chatPartner = parties[0];
             if (usersObj[chatPartner].chatOnline){
-                console.log("teraz by sme poslali...");
                 MODEL('channels').getChannel(chatPartner).send({"notify":client.user.id});
                 //usersObj[chatPartner].chatChannel.send({"notify":client.user.id});
             } else {

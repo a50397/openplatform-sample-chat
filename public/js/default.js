@@ -17,13 +17,20 @@ $(document).ready(function() {
         var users = JSON.parse(decodeURIComponent(e.data));
         var list_div = $('#partner-list');
         if (users.notify){
-            console.log('notified from ' + users.notify);
+            var span = $('div[data-id="'+users.notify+'"] #onlineStatus');
+            var unread = span.attr('data-unread');
+            if (unread)
+                unread = parseInt(unread,10) + 1;
+            else
+                unread = 1;
+            console.log('notified by ' + users.notify + " on " + unread);
+            span.attr('data-unread', unread);
         } else {
             //console.log(users);
             list_div.empty();
             jQuery.each(users, function(index,value){
                 if (value.id !== myself.id){
-                    var item = $('<div class="partners-list-item" data-id="'+value.id+'"><img class="img-circle small-img" src="'+value.photo+'"><h4 style="margin-bottom:0px;">'+value.alias+'</h4><span class="onlineStatus" id="onlineStatus">'+(value.chatOnline?'Online':'Offline')+'</span></div>');
+                    var item = $('<div class="partners-list-item" data-id="'+value.id+'" ><img class="img-circle small-img" src="'+value.photo+'"><h4 style="margin-bottom:0px;">'+value.alias+'</h4><span class="onlineStatus mybadge" id="onlineStatus">'+(value.chatOnline?'Online':'Offline')+'</span></div>');
                     if (value.chatOnline)
                         item.find("#onlineStatus").addClass('online');
                     if (chatPartner.id === value.id){
@@ -34,6 +41,7 @@ $(document).ready(function() {
                             $(value).removeClass('partner-selected');
                         });
                         $(event.currentTarget).addClass('partner-selected');
+                        $(event.currentTarget).find('#onlineStatus').removeAttr('data-unread');
                         chatPartner['id'] = value.id;
                         chatPartner['photo'] = value.photo;
                         chatPartner['alias'] = value.alias;
@@ -62,6 +70,8 @@ $(document).ready(function() {
         socket_chat = new WebSocket('ws://'+window.location.host+'/chats/'+url);
         socket_chat.onmessage = function(e){
             var chat = JSON.parse(decodeURIComponent(e.data));
+            if (chat.chat)
+                chat = chat.chat;
             for (var i = 0; i < chat.length; i++){
                 var imageUrl = '';
                 var classImg = '';
@@ -75,10 +85,14 @@ $(document).ready(function() {
                 }
                 var item = $('<li class="chatlist"><div class="wrap"><img class="img-circle large-img '+classImg+'" src="'+imageUrl+'"><div class="chat-text '+classText+'">'+smilefy(urlify(chat[i][1]))+'</div></div></li>');
                 item.appendTo(chat_list);
-                $('#chat_area').scrollTop($('#chat_area').height());
             }
+            console.log(chat.length);
+            console.log($("#chat_area").prop('scrollHeight'));
+            if (chat.length > 1)
+                $("#chat_area").scrollTop($("#chat_area").prop('scrollHeight'));
+            else
+            $("#chat_area").animate({scrollTop: $("#chat_area").prop('scrollHeight')}, 1000);
         };
-        //console.log(url);
     }
 
     $('#chat_submit').click(function(event){
