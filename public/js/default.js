@@ -16,7 +16,15 @@ $(document).ready(function() {
     socket_users.onmessage = function(e){
         var users = JSON.parse(decodeURIComponent(e.data));
         var list_div = $('#partner-list');
-        if (users.notify){
+        if (users.online) {
+            $('div[data-id="'+users.online+'"] #onlineStatus').text('Online');
+            $('div[data-id="'+users.online+'"] #onlineStatus').addClass('online');
+        }
+        else if (users.offline){
+            $('div[data-id="'+users.offline+'"] #onlineStatus').text('Offline');
+            $('div[data-id="'+users.offline+'"] #onlineStatus').removeClass('online');
+        }
+        else if (users.notify){
             var span = $('div[data-id="'+users.notify+'"] #onlineStatus');
             var unread = span.attr('data-unread');
             if (unread)
@@ -25,6 +33,11 @@ $(document).ready(function() {
                 unread = 1;
             console.log('notified by ' + users.notify + " on " + unread);
             span.attr('data-unread', unread);
+        } else if (users.unread) {
+            for (actor in users.unread){
+                if (users.unread[actor] > 0)
+                    $('div[data-id="'+actor+'"] #onlineStatus').attr('data-unread', users.unread[actor]);
+            }
         } else {
             //console.log(users);
             list_div.empty();
@@ -70,8 +83,6 @@ $(document).ready(function() {
         socket_chat = new WebSocket('ws://'+window.location.host+'/chats/'+url);
         socket_chat.onmessage = function(e){
             var chat = JSON.parse(decodeURIComponent(e.data));
-            if (chat.chat)
-                chat = chat.chat;
             for (var i = 0; i < chat.length; i++){
                 var imageUrl = '';
                 var classImg = '';

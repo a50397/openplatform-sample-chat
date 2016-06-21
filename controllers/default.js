@@ -22,13 +22,15 @@ function socket_users(){
         for (user in controller.connections){
             usersObj[controller.connections[user].id].chatOnline = true;
         }
-		controller.send(usersObj);
+        client.send(usersObj);
+        client.send({'unread':MODEL('chats').getUnread(client.id)});
+		controller.send({'online':client.id});
 	});
 
 	controller.on('close', function(client) {
         usersObj[client.id].chatOnline = false;
         MODEL('channels').putChannel(client.id, null);
-		controller.send(usersObj);
+		controller.send({'offline':client.id});
 	});
 
     controller.on('message',function(client, message){
@@ -42,12 +44,20 @@ function socket_chats(route){
 
     controller.on('open', function(client) {
         client.send(MODEL('chats').getChat(route));
+        var parties = route.split('.');
+        if (parties[0] === client.user.id)
+            var chatPartner = parties[1];
+        else
+            var chatPartner = parties[0];
+        MODEL('chats').setRead(client.user.id, chatPartner);
 	});
 
     controller.on('message', function(client, message) {
         MODEL('chats').updateChat(route, client.user.id, message.message);
         controller.send([[client.user.id, message.message]]);
+        console.log("online " + controller.online);
         if (controller.online < 2){
+            console.log('Notifying');
             var parties = route.split('.');
             if (parties[0] === client.user.id)
                 var chatPartner = parties[1];
@@ -55,8 +65,10 @@ function socket_chats(route){
                 var chatPartner = parties[0];
             if (usersObj[chatPartner].chatOnline){
                 MODEL('channels').getChannel(chatPartner).send({"notify":client.user.id});
-                //usersObj[chatPartner].chatChannel.send({"notify":client.user.id});
+                MODEL('chats').updateUnread(chatPartner, client.user.id);
+
             } else {
+                MODEL('chats').updateUnread(chatPartner, client.user.id);
                 OPENPLATFORM.notify(client.user.openplatform, chatPartner, "You've got chat message from " + client.user.alias, function(err, response) {
                     if (err)
                         console.log('Notifying a user without chat app installed');
