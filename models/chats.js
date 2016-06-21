@@ -14,13 +14,15 @@ exports.updateChat = function(route, actor, chat){
         chats[route] = [];
     }
     chats[route].push([actor, chat, new Date().getTime()]);
+    if (chats[route].length > 20){
+        chats[route].shift();
+    }
 }
 
 exports.getUnread = function(actor){
     if (!unread[actor]){
         unread[actor] = {};
     }
-    console.log('getUnread ',actor, unread[actor]);
     return unread[actor];
 
 }
@@ -33,7 +35,6 @@ exports.updateUnread = function(actor, partner){
     if (!unread[actor][partner])
         unread[actor][partner] = 0;
     unread[actor][partner] += 1;
-    console.log('unreadUpdate ',actor, unread[actor]);
 }
 
 exports.setRead = function(actor, partner){
@@ -41,6 +42,5 @@ exports.setRead = function(actor, partner){
         unread[actor] = {};
     }
     unread[actor][partner] = 0;
-    console.log('setRead ',actor, unread[actor]);
 }
 

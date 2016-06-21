@@ -31,7 +31,7 @@ $(document).ready(function() {
                 unread = parseInt(unread,10) + 1;
             else
                 unread = 1;
-            console.log('notified by ' + users.notify + " on " + unread);
+            //console.log('notified by ' + users.notify + " on " + unread);
             span.attr('data-unread', unread);
         } else if (users.unread) {
             for (actor in users.unread){
@@ -97,8 +97,8 @@ $(document).ready(function() {
                 var item = $('<li class="chatlist"><div class="wrap"><img class="img-circle large-img '+classImg+'" src="'+imageUrl+'"><div class="chat-text '+classText+'">'+smilefy(urlify(chat[i][1]))+'</div></div></li>');
                 item.appendTo(chat_list);
             }
-            console.log(chat.length);
-            console.log($("#chat_area").prop('scrollHeight'));
+            //console.log(chat.length);
+            //console.log($("#chat_area").prop('scrollHeight'));
             if (chat.length > 1)
                 $("#chat_area").scrollTop($("#chat_area").prop('scrollHeight'));
             else

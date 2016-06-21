@@ -55,9 +55,7 @@ function socket_chats(route){
     controller.on('message', function(client, message) {
         MODEL('chats').updateChat(route, client.user.id, message.message);
         controller.send([[client.user.id, message.message]]);
-        console.log("online " + controller.online);
         if (controller.online < 2){
-            console.log('Notifying');
             var parties = route.split('.');
             if (parties[0] === client.user.id)
                 var chatPartner = parties[1];
@@ -69,7 +67,7 @@ function socket_chats(route){
 
             } else {
                 MODEL('chats').updateUnread(chatPartner, client.user.id);
-                OPENPLATFORM.notify(client.user.openplatform, chatPartner, "You've got chat message from " + client.user.alias, function(err, response) {
+                OPENPLATFORM.notify(client.user.openplatform, chatPartner, client.user.alias + ": " + message.message, function(err, response) {
                     if (err)
                         console.log('Notifying a user without chat app installed');
                 });
